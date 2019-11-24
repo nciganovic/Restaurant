@@ -305,10 +305,38 @@ img {
 }
 
 .mu-top-slider-single {
+  background-image: url(../img/slider/1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   display: inline;
   float: left;
   position: relative;
   width: 100%;
+  height: 100vh;
+
+  position: relative;
+}
+.dot-div{
+  position: absolute;
+  bottom: -350px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.dot{
+    width: 17px;
+    height: 17px;
+    border: 1px solid #fff700;
+    border-radius: 50%;
+    margin: 1%;
+}
+.bg-yellow{
+  background-color: yellow;
 }
 
 .mu-top-slider .mu-top-slider-single:after {
@@ -1543,11 +1571,11 @@ RESERVATION SECTION
     padding-right: 5px;
     font-size: 14px;
   }
-
+/*
   .mu-top-slider-content .mu-reservation-btn {
-    display: none;
+    display: inline-block;
   }
-
+*/
   .mu-about-us-left,
   .mu-reservation-form {
     text-align: center;
