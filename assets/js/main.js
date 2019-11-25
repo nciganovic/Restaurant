@@ -17,7 +17,7 @@ var database = {
         }
     }
 }
-
+/* TODO change  bgImageHolder.style.backgroundImage to classList add or something */
 var dot = document.getElementsByClassName('dot');
 var sliderHeadline = document.querySelector('.mu-top-slider-content h2');
 var sliderDescription = document.querySelector('.mu-top-slider-content p');
@@ -99,4 +99,25 @@ function changeSlideAuto(){
     else if(currentSlide == 3){
         changeToSlide3();
     }
+}
+
+/* Navbar mobile menu */
+var navbarBtn = document.querySelector('.navbar-toggle');
+var nabarMobile = document.getElementById('mobile-navbar');
+var navbarIcon = document.querySelector('.fas');
+var navbarMobileLinks = document.querySelectorAll('#mobile-navbar-list a');
+
+var isOpenNavbar = false;
+
+navbarBtn.addEventListener('click', openOrCloseNavbar);
+
+function openOrCloseNavbar(){
+    nabarMobile.classList.toggle('display-none');
+    nabarMobile.classList.toggle('display-block');
+    navbarIcon.classList.toggle('fa-times');
+    navbarIcon.classList.toggle('fa-bars');
+}
+
+for(n of navbarMobileLinks){
+    n.addEventListener('click', openOrCloseNavbar);
 }
