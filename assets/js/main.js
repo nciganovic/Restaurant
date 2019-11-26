@@ -141,8 +141,6 @@ for(n of navbarMobileLinks){
 var aboutUsP = document.querySelectorAll('.mu-about-us-right p');
 var aboutUsUl = document.querySelector('.mu-about-us-right ul');
 
-console.log(aboutUsUl);
-
 aboutUsP[0].innerText = database.aboutUs.intro.pText;
 aboutUsP[1].innerText = database.aboutUs.outro.pText;
 
@@ -150,8 +148,60 @@ aboutUsP[1].innerText = database.aboutUs.outro.pText;
 var obj = database.aboutUs.list;
 
 for(var i in obj){
-    console.log(i);
     var li = document.createElement('li');
     li.innerText = i;
     aboutUsUl.appendChild(li);
+}
+
+var observer = new IntersectionObserver(function(entries) {
+	// isIntersecting is true when element and viewport are overlapping
+	// isIntersecting is false when element and viewport don't overlap
+	if(entries[0].isIntersecting === true)
+	{
+        setInterval(increaseItem1, 10);
+        setInterval(increaseItem2, 10);
+        setInterval(increaseItem3, 10);
+        setInterval(increaseItem4, 1);
+    }
+}, { threshold: [0] });
+
+observer.observe(document.querySelector("#mu-counter"));
+
+/* Item couner */
+var item1 =  document.getElementsByClassName('counter-value')[0];
+var item2 =  document.getElementsByClassName('counter-value')[1];
+var item3 =  document.getElementsByClassName('counter-value')[2];
+var item4 =  document.getElementsByClassName('counter-value')[3];
+
+var t1 = 0;
+var t2 = 0;
+var t3 = 0;
+var t4 = 0;
+
+function increaseItem1(){
+    if(t1 < 125){
+        t1++;
+    }
+    item1.innerText = t1;
+}
+
+function increaseItem2(){
+    if(t2 < 245){
+        t2++;
+    }
+    item2.innerText = t2;
+}
+
+function increaseItem3(){
+    if(t3 < 86){
+        t3++;
+    }
+    item3.innerText = t3;
+}
+
+function increaseItem4(){
+    if(t4 < 578){
+        t4 += 1;
+    }
+    item4.innerText = t4;
 }
