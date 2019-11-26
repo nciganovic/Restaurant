@@ -690,6 +690,7 @@ img {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   border-radius: 0;
+  border: 1px solid orange !important;
   color: #fff;
   font-size: 18px;
   margin: 0 15px;
@@ -724,7 +725,7 @@ img {
 .mu-tab-content-right {
   display: inline;
   float: left;
-  padding-left: 15px;
+  /*padding-left: 15px;*/
   width: 100%;
 }
 
@@ -778,6 +779,7 @@ img {
   margin-top: 10px;
   font-size: 14px;
 }
+
 
 /*==================
 RESERVATION SECTION

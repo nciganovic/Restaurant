@@ -30,6 +30,198 @@ var database = {
         outro:{
             pText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque similique molestias est quod reprehenderit, quibusdam nam qui, quam magnam."
         }
+    },
+    ourMenu:{
+        Breakfast:{
+            1:{
+                src:"assets/img/menu/slika1.jpg",
+                title:"breakfast 1 title",
+                price:"$153.59",
+                desc: "Description of breakfast 1"
+            },
+            2:{
+                src:"assets/img/menu/slika1.jpg",
+                title:"breakfast 2 title",
+                price:"$15.59",
+                desc: "Description of breakfast 2"
+            },
+            3:{
+                src:"assets/img/menu/slika1.jpg",
+                title:"breakfast 3 title",
+                price:"$125.59",
+                desc: "Description of breakfast 3"
+            },
+            4:{
+                src:"assets/img/menu/slika1.jpg",
+                title:"breakfast 4 title",
+                price:"$5.59",
+                desc: "Description of breakfast 4"
+            },
+            5:{
+                src:"assets/img/menu/slika1.jpg",
+                title:"breakfast 5 title",
+                price:"$1.59",
+                desc: "Description of breakfast 5"
+            },
+            6:{
+                src:"assets/img/menu/slika1.jpg",
+                title:"breakfast 6 title",
+                price:"$1545.59",
+                desc: "Description of breakfast 6"
+            }
+        },
+        Meals:{
+            1:{
+                src:"slika1.jpg",
+                title:"Meal title 1",
+                price:"$99.59",
+                desc: "Description of Meal"
+            },
+            2:{
+                src:"slika1.jpg",
+                title:"Meal title 2",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            3:{
+                src:"slika1.jpg",
+                title:"Meal title 3",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            4:{
+                src:"slika1.jpg",
+                title:"Meal title 4",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            5:{
+                src:"slika1.jpg",
+                title:"Meal title 5",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            6:{
+                src:"slika1.jpg",
+                title:"Meal title 6",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            }
+        },
+        Snacks:{
+            1:{
+                src:"slika1.jpg",
+                title:"Snack 1",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            2:{
+                src:"slika1.jpg",
+                title:"Snack 2",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            3:{
+                src:"slika1.jpg",
+                title:"Snack 3",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            4:{
+                src:"slika1.jpg",
+                title:"Snack 4",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            5:{
+                src:"slika1.jpg",
+                title:"Snack 5",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            6:{
+                src:"slika1.jpg",
+                title:"Snack 6",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            }
+        },
+        Desserts:{
+            1:{
+                src:"slika1.jpg",
+                title:"Desserts 1",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            2:{
+                src:"slika1.jpg",
+                title:"Desserts 2",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            3:{
+                src:"slika1.jpg",
+                title:"Desserts 3",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            4:{
+                src:"slika1.jpg",
+                title:"Desserts 4",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            5:{
+                src:"slika1.jpg",
+                title:"Desserts 5",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            6:{
+                src:"slika1.jpg",
+                title:"Desserts 6",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            }
+        },
+        Drinks:{
+            1:{
+                src:"slika1.jpg",
+                title:"Drink 1",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            2:{
+                src:"slika1.jpg",
+                title:"Drink 2",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            3:{
+                src:"slika1.jpg",
+                title:"Drink 3",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            4:{
+                src:"slika1.jpg",
+                title:"Drink 4",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            5:{
+                src:"slika1.jpg",
+                title:"Drink 5",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            },
+            6:{
+                src:"slika1.jpg",
+                title:"Drink 6",
+                price:"$15.59",
+                desc: "Description of breakfast"
+            }
+        }
     }
 }
 /* TODO change  bgImageHolder.style.backgroundImage to classList add or something */
@@ -102,8 +294,6 @@ function changeSlideAuto(){
     if(currentSlide > 3){
         currentSlide = 1;
     }
-
-    console.log(currentSlide);
 
     if(currentSlide == 1){
         changeToSlide1();
@@ -204,4 +394,142 @@ function increaseItem4(){
         t4 += 1;
     }
     item4.innerText = t4;
+}
+
+/* Our menu */
+var menuListHolder = document.getElementsByClassName('mu-menu-item-nav');
+var menuHolder = document.querySelector('.mu-restaurant-menu');
+
+var allMeals = database.ourMenu;
+var data = database.ourMenu.Breakfast;
+
+
+for(m in allMeals){
+    var newLiTag = document.createElement('li');
+    var aTag = document.createElement('a');
+
+    aTag.innerText = m;
+    aTag.setAttribute('href', ' ');
+
+    if(m == 'Breakfast'){
+        newLiTag.setAttribute('class', 'active');
+    }
+
+    menuHolder.appendChild(newLiTag);
+    newLiTag.appendChild(aTag);
+
+}
+
+for(i in data){
+    var liTag = `<li>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="${data[i].src}" alt="img-110x110">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="#">${data[i].title}</a></h4>
+                            <span class="mu-menu-price">${data[i].price}</span>
+                            <p>${data[i].desc}</p>
+                        </div>
+                    </div>
+                </li>`; 
+
+    if(Number(i) % 2 == 0){
+        console.log(data[i].src);
+        menuListHolder[0].innerHTML += liTag;
+    }
+    else{
+        menuListHolder[1].innerHTML += liTag;
+    }
+}
+
+var allMenuHolderTags = document.querySelectorAll('.mu-restaurant-menu li');
+
+allMenuHolderTags[0].addEventListener('click', setBreakfast);
+allMenuHolderTags[1].addEventListener('click', setMeals);
+allMenuHolderTags[2].addEventListener('click', setSnacks);
+allMenuHolderTags[3].addEventListener('click', setDesserts);
+allMenuHolderTags[4].addEventListener('click', setDrinks);
+
+var menuListHolderImage = document.querySelectorAll('.media-object');
+var menuListHolderTitle = document.querySelectorAll('.media-heading a');
+var menuListHolderPrice = document.querySelectorAll('.mu-menu-price');
+var menuListHolderDesc = document.querySelectorAll('.media-body p');
+
+function setBreakfast(event){
+    event.preventDefault();
+    var breakfastData = database.ourMenu.Breakfast;
+    var i = 0;
+    for(br in breakfastData){
+        menuListHolderImage[i].src = breakfastData[br].src;
+        menuListHolderTitle[i].innerText = breakfastData[br].title;
+        menuListHolderPrice[i].innerText = breakfastData[br].price;
+        menuListHolderDesc[i].innerText = breakfastData[br].desc;
+        i++;
+    }
+}
+function setMeals(){
+    event.preventDefault();
+    var mealData = database.ourMenu.Meals;
+    var i = 0;
+    for(m in mealData){
+        menuListHolderImage[i].src = mealData[m].src;
+        menuListHolderTitle[i].innerText = mealData[m].title;
+        menuListHolderPrice[i].innerText = mealData[m].price;
+        menuListHolderDesc[i].innerText = mealData[m].desc;
+        i++;
+    }
+}
+function setSnacks(){
+    event.preventDefault();
+    var snackData = database.ourMenu.Snacks;
+    var i = 0;
+    for(s in snackData){
+        menuListHolderImage[i].src = snackData[s].src;
+        menuListHolderTitle[i].innerText = snackData[s].title;
+        menuListHolderPrice[i].innerText = snackData[s].price;
+        menuListHolderDesc[i].innerText = snackData[s].desc;
+        i++;
+    }
+}
+function setDesserts(){
+    event.preventDefault();
+    var dessertData = database.ourMenu.Desserts;
+    var i = 0;
+    for(d in dessertData){
+        menuListHolderImage[i].src = dessertData[d].src;
+        menuListHolderTitle[i].innerText = dessertData[d].title;
+        menuListHolderPrice[i].innerText = dessertData[d].price;
+        menuListHolderDesc[i].innerText = dessertData[d].desc;
+        i++;
+    }
+}
+function setDrinks(){
+    event.preventDefault();
+    var drinkData = database.ourMenu.Drinks;
+    var i = 0;
+    for(d in drinkData){
+        menuListHolderImage[i].src = drinkData[d].src;
+        menuListHolderTitle[i].innerText = drinkData[d].title;
+        menuListHolderPrice[i].innerText = drinkData[d].price;
+        menuListHolderDesc[i].innerText = drinkData[d].desc;
+        i++;
+    }
+}
+
+for(al in allMenuHolderTags){
+    allMenuHolderTags[al].addEventListener('click', testFnc)
+} 
+
+function testFnc(){
+    for(al of allMenuHolderTags){
+        if(this == al){
+            al.classList.add('active');
+        }
+        else{
+            al.classList.remove('active');
+        }
+    }
 }
