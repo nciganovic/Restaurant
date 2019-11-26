@@ -15,6 +15,21 @@ var database = {
             desc: "Description of third slider",
             imgUrl:"url('assets/img/slider/3.jpg')"
         }
+    },
+    aboutUs:{
+        intro:{
+            pText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam minus aliquid, itaque illum assumenda repellendus dolorem, dolore numquam totam saepe, porro delectus, libero enim odio quo. Explicabo ex sapiente sit eligendi, facere voluptatum! Quia vero rerum sunt porro architecto corrupti eaque corporis eum, enim soluta, perferendis dignissimos, repellendus, beatae laboriosam."
+        },
+        list:{
+            obj1:"1",
+            obj2:"2",
+            obj3:"3",
+            obj4:"4",
+            obj5:"5",
+        },
+        outro:{
+            pText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque similique molestias est quod reprehenderit, quibusdam nam qui, quam magnam."
+        }
     }
 }
 /* TODO change  bgImageHolder.style.backgroundImage to classList add or something */
@@ -120,4 +135,23 @@ function openOrCloseNavbar(){
 
 for(n of navbarMobileLinks){
     n.addEventListener('click', openOrCloseNavbar);
+}
+
+/* About us */
+var aboutUsP = document.querySelectorAll('.mu-about-us-right p');
+var aboutUsUl = document.querySelector('.mu-about-us-right ul');
+
+console.log(aboutUsUl);
+
+aboutUsP[0].innerText = database.aboutUs.intro.pText;
+aboutUsP[1].innerText = database.aboutUs.outro.pText;
+
+
+var obj = database.aboutUs.list;
+
+for(var i in obj){
+    console.log(i);
+    var li = document.createElement('li');
+    li.innerText = i;
+    aboutUsUl.appendChild(li);
 }
