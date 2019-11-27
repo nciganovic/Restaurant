@@ -94,6 +94,7 @@ img {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  margin-left: 15px;
 }
 
 .mu-readmore-btn::after {
@@ -976,6 +977,13 @@ RESERVATION SECTION
   font-weight: 600;
 }
 
+#formResErrors ul{
+  margin-top: 5%;
+  list-style-type: none;
+}
+#formResErrors ul li{
+  color: white;
+}
 /*==================
  GALLERY SECTION
 ====================*/

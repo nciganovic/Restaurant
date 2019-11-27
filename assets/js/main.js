@@ -222,6 +222,9 @@ var database = {
                 desc: "Description of breakfast"
             }
         }
+    },
+    reservation:{
+        desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quidem autem iusto, perspiciatis, amet, quaerat blanditiis ducimus eius recusandae nisi aut totam alias consectetur et",
     }
 }
 /* TODO change  bgImageHolder.style.backgroundImage to classList add or something */
@@ -458,74 +461,18 @@ var menuListHolderTitle = document.querySelectorAll('.media-heading a');
 var menuListHolderPrice = document.querySelectorAll('.mu-menu-price');
 var menuListHolderDesc = document.querySelectorAll('.media-body p');
 
-function setBreakfast(event){
-    event.preventDefault();
-    var breakfastData = database.ourMenu.Breakfast;
+function setData(x, y){
+    var currentData = x;
     var i = 0;
-    for(br in breakfastData){
-        menuListHolderImage[i].src = breakfastData[br].src;
-        menuListHolderTitle[i].innerText = breakfastData[br].title;
-        menuListHolderPrice[i].innerText = breakfastData[br].price;
-        menuListHolderDesc[i].innerText = breakfastData[br].desc;
-        i++;
+    for(cd in currentData){
+        menuListHolderImage[i].src = currentData[cd].src;
+        menuListHolderTitle[i].innerText = currentData[cd].title;
+        menuListHolderPrice[i].innerText = currentData[cd].price;
+        menuListHolderDesc[i].innerText = currentData[cd].desc;
+        i++; 
     }
-}
-function setMeals(){
-    event.preventDefault();
-    var mealData = database.ourMenu.Meals;
-    var i = 0;
-    for(m in mealData){
-        menuListHolderImage[i].src = mealData[m].src;
-        menuListHolderTitle[i].innerText = mealData[m].title;
-        menuListHolderPrice[i].innerText = mealData[m].price;
-        menuListHolderDesc[i].innerText = mealData[m].desc;
-        i++;
-    }
-}
-function setSnacks(){
-    event.preventDefault();
-    var snackData = database.ourMenu.Snacks;
-    var i = 0;
-    for(s in snackData){
-        menuListHolderImage[i].src = snackData[s].src;
-        menuListHolderTitle[i].innerText = snackData[s].title;
-        menuListHolderPrice[i].innerText = snackData[s].price;
-        menuListHolderDesc[i].innerText = snackData[s].desc;
-        i++;
-    }
-}
-function setDesserts(){
-    event.preventDefault();
-    var dessertData = database.ourMenu.Desserts;
-    var i = 0;
-    for(d in dessertData){
-        menuListHolderImage[i].src = dessertData[d].src;
-        menuListHolderTitle[i].innerText = dessertData[d].title;
-        menuListHolderPrice[i].innerText = dessertData[d].price;
-        menuListHolderDesc[i].innerText = dessertData[d].desc;
-        i++;
-    }
-}
-function setDrinks(){
-    event.preventDefault();
-    var drinkData = database.ourMenu.Drinks;
-    var i = 0;
-    for(d in drinkData){
-        menuListHolderImage[i].src = drinkData[d].src;
-        menuListHolderTitle[i].innerText = drinkData[d].title;
-        menuListHolderPrice[i].innerText = drinkData[d].price;
-        menuListHolderDesc[i].innerText = drinkData[d].desc;
-        i++;
-    }
-}
-
-for(al in allMenuHolderTags){
-    allMenuHolderTags[al].addEventListener('click', testFnc)
-} 
-
-function testFnc(){
     for(al of allMenuHolderTags){
-        if(this == al){
+        if(y == al){
             al.classList.add('active');
         }
         else{
@@ -533,3 +480,117 @@ function testFnc(){
         }
     }
 }
+
+function setBreakfast(event){
+    event.preventDefault();
+    setData(database.ourMenu.Breakfast, this);
+}
+function setMeals(){
+    event.preventDefault();
+    setData(database.ourMenu.Meals, this);
+}
+function setSnacks(){
+    event.preventDefault();
+    setData(database.ourMenu.Snacks, this);
+}
+function setDesserts(){
+    event.preventDefault();
+    setData(database.ourMenu.Desserts, this);
+}
+function setDrinks(){
+    event.preventDefault();
+    setData(database.ourMenu.Drinks, this);
+}
+
+/* Reservation */
+var reservationDesc = document.querySelector('.mu-reservation-content p');
+var formRes = document.querySelector('.mu-reservation-form');
+var formResErrors = document.getElementById('formResErrors');
+
+var isFullNameValid = false;
+var isEmailValid = false;
+var isNumberValid = false;
+var isSelectValid = false;
+var isDateValid = false;
+
+for(let i = 0; i < 10; i++){
+    var optionTag = document.createElement('option');
+    optionTag.setAttribute('value', i);
+    if(i == 0){
+        optionTag.innerText = 'How many persons?';
+    }
+    else if (i == 1){
+        optionTag.innerText = '1 Person';
+    }
+    else{
+        optionTag.innerText = i + ' Persons';
+    }
+    formRes.howManyRes.appendChild(optionTag);
+}
+
+formRes.btnRes.addEventListener('click', submitReservetionFrom);
+
+function submitReservetionFrom(){
+
+    var firstNameRgx = /^[A-z]{1,15}(\s[A-z]{1,15})?$/;
+    isFullNameValid = firstNameRgx.test(formRes.fullNameRes.value);
+    console.log(formRes.fullNameRes.value);
+    console.log(isFullNameValid);
+
+    var emailRgx = /^[a-z]{1}[a-z0-9\.\_\-]{1,30}@[a-z\.]{3,10}\.[a-z]{2,3}$/;
+    isEmailValid = emailRgx.test(formRes.emailRes.value);
+    console.log(formRes.emailRes.value);
+    console.log(isEmailValid);
+
+    var numberRgx = /^[0-9]{7,9}$/; 
+    isNumberValid = numberRgx.test(formRes.numberRes.value);
+    console.log(formRes.numberRes.value);
+    console.log(isNumberValid);
+
+    if(formRes.howManyRes.selectedIndex != 0){
+        isSelectValid = true;
+    }
+    else{
+        isSelectValid = false;
+    }
+
+    var dateRgx = /^([1-9]|0[1-9]|[1-2][0-9]|3[0-1])-([1-9]|0[1-9]|1[0-2])-2019$/;
+    isDateValid = dateRgx.test(formRes.datepicker.value);
+    console.log(formRes.datepicker.value);
+    console.log(isDateValid);
+
+    if(isFullNameValid && isEmailValid && isNumberValid && isSelectValid && isDateValid){
+        formResErrors.innerHTML = "";
+        alert('Your reservation has been sent!');
+        formRes.fullNameRes.value = "";
+        formRes.emailRes.value = "";
+        formRes.numberRes.value = "";
+        formRes.howManyRes.selectedIndex = 0;
+        formRes.datepicker.value = "";
+        formRes.messageRes.value = "";
+    }
+    else{
+        formResErrors.innerHTML = "";
+        var ulTag = document.createElement('ul'); 
+        if(!isFullNameValid){
+            ulTag.innerHTML += '<li>Full name is invalid</li>';
+        }
+        if(!isEmailValid){
+            ulTag.innerHTML += '<li>Email is invalid</li>';
+        }
+        if(!isNumberValid){
+            ulTag.innerHTML += '<li>Phone number is invalid</li>';
+        }
+        if(!isSelectValid){
+            ulTag.innerHTML += '<li>Select is invalid</li>';
+        }
+        if(!isDateValid){
+            ulTag.innerHTML += '<li>Date is invalid</li>';
+        }
+        formResErrors.appendChild(ulTag);
+    }
+    
+
+}
+
+reservationDesc.innerText = database.reservation.desc;
