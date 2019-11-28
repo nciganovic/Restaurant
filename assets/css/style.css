@@ -1147,7 +1147,7 @@ RESERVATION SECTION
 }
 
 .mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info p:before {
-  content: '\f10e';
+  /*content: '\f10e';*/
   font-family: fontAwesome;
   font-size: 50px;
   left: 1%;

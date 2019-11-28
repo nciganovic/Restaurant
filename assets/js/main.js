@@ -236,6 +236,20 @@ var database = {
         img7:"assets/img/gallery/7.jpg",
         img8:"assets/img/gallery/8.jpg",
         img9:"assets/img/gallery/9.jpg",
+    },
+    testemonials:{
+        0:{
+            text:"This resourant is amazing.",
+            name:"Mike Scott"
+        },
+        1:{
+            text:"Food id delecius.",
+            name:"Tom Brady"
+        },
+        2:{
+            text:"Best lunch on planet.",
+            name:"Ashley Michels"
+        }
     }
 }
 /* TODO change  bgImageHolder.style.backgroundImage to classList add or something */
@@ -622,4 +636,33 @@ for(i in allImgsLinks){
 
     galleryBody.innerHTML += divInGallery;
 }
+
+var testemonialData = database.testemonials;
+
+for(var i in testemonialData){
+    console.log(i);
+    console.log(testemonialData[i].text)
+    console.log(testemonialData[i].name) 
+}
+
+$(document).ready(function(){	
+    setInterval(changeTestemonial, 2500);
+    var i = 0; 
+    function changeTestemonial(){
+        i++;
+        if(i > 2){
+            i = 0;
+        }
+
+        $('.mu-testimonial-info p').animate({'opacity': 0}, 2500, function () {
+            $(this).text(testemonialData[i].text);
+        }).animate({'opacity': 1}, 2500);
+
+        $('.mu-testimonial-bio p').animate({'opacity': 0}, 2500, function () {
+            $(this).text(testemonialData[i].name);
+        }).animate({'opacity': 1}, 2500);
+
+      
+    }
+})
 
