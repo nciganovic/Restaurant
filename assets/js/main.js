@@ -225,6 +225,17 @@ var database = {
     },
     reservation:{
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quidem autem iusto, perspiciatis, amet, quaerat blanditiis ducimus eius recusandae nisi aut totam alias consectetur et",
+    },
+    gallery:{
+        img1:"assets/img/gallery/1.jpg",
+        img2:"assets/img/gallery/2.jpg",
+        img3:"assets/img/gallery/3.jpg",
+        img4:"assets/img/gallery/4.jpg",
+        img5:"assets/img/gallery/5.jpg",
+        img6:"assets/img/gallery/6.jpg",
+        img7:"assets/img/gallery/7.jpg",
+        img8:"assets/img/gallery/8.jpg",
+        img9:"assets/img/gallery/9.jpg",
     }
 }
 /* TODO change  bgImageHolder.style.backgroundImage to classList add or something */
@@ -589,8 +600,26 @@ function submitReservetionFrom(){
         }
         formResErrors.appendChild(ulTag);
     }
-    
-
 }
 
 reservationDesc.innerText = database.reservation.desc;
+
+/* gallery */
+var galleryBody = document.querySelector('.mu-gallery-body');
+
+var allImgsLinks = database.gallery
+
+for(i in allImgsLinks){
+    var divInGallery = `<div class="mu-single-gallery col-md-4">
+                            <div class="mu-single-gallery-item">
+                                <figure class="mu-single-gallery-img">
+                                    <a href="${allImgsLinks[i]}" class="js-img-viwer" data-caption="lion" data-id="lion">
+                                        <img src="${allImgsLinks[i]}" width="360"/>
+                                    </a>
+                                </figure>            
+                            </div>
+                        </div>`
+
+    galleryBody.innerHTML += divInGallery;
+}
+
