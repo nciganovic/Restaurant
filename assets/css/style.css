@@ -82,6 +82,10 @@ img {
   font-size: 2.5rem;
 }
 
+.col-red{
+  color: red;
+}
+
 .mu-readmore-btn {
   background-color: #fff;
   font-family: "Open Sans", sans-serif;

@@ -512,7 +512,6 @@ for(i in data){
                 </li>`; 
 
     if(Number(i) % 2 == 0){
-        console.log(data[i].src);
         menuListHolder[0].innerHTML += liTag;
     }
     else{
@@ -686,12 +685,6 @@ for(i in allImgsLinks){
 
 var testemonialData = database.testemonials;
 
-for(var i in testemonialData){
-    console.log(i);
-    console.log(testemonialData[i].text)
-    console.log(testemonialData[i].name) 
-}
-
 $(document).ready(function(){	
     setInterval(changeTestemonial, 2500);
     var i = 0; 
@@ -738,3 +731,71 @@ for(c in chefData){
 
     chefHolder.innerHTML += liTag;
 }
+
+/* Contact us */
+var contactFrom = document.getElementById('mu-contact-form');
+
+var ContactUsisNameValid = false;
+var ContactUsisEmailValid = false;
+var ContactUsisSubjectValid = false;
+
+contactFrom.name.addEventListener('blur', checkNameContactUs);
+contactFrom.email.addEventListener('blur', checkEmailContactUs);
+contactFrom.subject.addEventListener('blur', checkSubjectContactUs);
+contactFrom.btnContactUs.addEventListener('click', SubmitFormContactUs);
+
+function checkNameContactUs(){
+    var nameErr = document.getElementById('nameErr');
+    var nameRgx = /^[A-z]{1,15}(\s[A-z]{1,15})?$/;
+    ContactUsisNameValid = nameRgx.test(contactFrom.name.value);
+    console.log(ContactUsisNameValid);
+    if(ContactUsisNameValid){
+        nameErr.innerText = '';
+    }
+    else{
+        nameErr.innerText = 'Please enter valid name';
+    }
+}
+
+function checkEmailContactUs(){
+    var emailErr = document.getElementById('emailErr');
+    var emailRgx = /^[a-z]{1}[a-z0-9\.\_\-]{1,30}@[a-z\.]{3,10}\.[a-z]{2,3}$/;
+    ContactUsisEmailValid = emailRgx.test(contactFrom.email.value);
+    console.log(ContactUsisEmailValid);
+    if(ContactUsisEmailValid){
+        emailErr.innerText = '';
+    }
+    else{
+        emailErr.innerText = 'Please enter valid email';
+    }
+}
+
+function checkSubjectContactUs(){
+    var subjectErr = document.getElementById('subjectErr');
+    var subjectRgx = /[\w 0-9]/;
+    ContactUsisSubjectValid = subjectRgx.test(contactFrom.subject.value);
+    console.log(ContactUsisSubjectValid);
+    if(ContactUsisSubjectValid){
+        subjectErr.innerText = '';
+    }
+    else{
+        subjectErr.innerText = 'Please enter valid subject';
+    }
+}
+
+function SubmitFormContactUs(){
+    var errorMsg = document.getElementById('contactUsErrMessages');
+    if(!ContactUsisNameValid || !ContactUsisEmailValid || !ContactUsisSubjectValid){
+        errorMsg.innerText = 'Make sure all of the fields entered and valid';
+    }
+    else{
+        errorMsg.innerText = '';
+        alert('Message sent successfully!');
+        contactFrom.name.value = '';
+        contactFrom.email.value = '';
+        contactFrom.subject.value = '';
+        contactFrom.message.value = '';
+    }
+}
+
+
