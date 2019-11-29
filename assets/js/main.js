@@ -250,6 +250,53 @@ var database = {
             text:"Best lunch on planet.",
             name:"Ashley Michels"
         }
+    },
+    chefs:{
+        0:{
+            name:"John Taylor",
+            job:"Head Chef",
+            src:"assets/img/chef/chef1.jpg",
+        },
+        1:{
+            name:"Peter Smith",
+            job:"Head Chef",
+            src:"assets/img/chef/chef2.jpg",
+        },
+        2:{
+            name:"John Taylor 2",
+            job:"Head Chef 1",
+            src:"assets/img/chef/chef3.jpg",
+        },
+        3:{
+            name:"John Taylor 3",
+            job:"Head Chef 2",
+            src:"assets/img/chef/chef4.jpg",
+        },
+        4:{
+            name:"John Taylor 4",
+            job:"Head Chef 3",
+            src:"assets/img/chef/chef5.jpg",
+        },
+        5:{
+            name:"John Taylor 5",
+            job:"Head Chef 4",
+            src:"assets/img/chef/chef6.jpg",
+        },
+        6:{
+            name:"John Taylor 6",
+            job:"Head Chef 5",
+            src:"assets/img/chef/chef7.jpg",
+        },
+        7:{
+            name:"John Taylor 7",
+            job:"Head Chef 6",
+            src:"assets/img/chef/chef8.jpg",
+        },
+        8:{
+            name:"John Taylor 8",
+            job:"Head Chef 7",
+            src:"assets/img/chef/chef9.jpg",
+        },
     }
 }
 /* TODO change  bgImageHolder.style.backgroundImage to classList add or something */
@@ -666,3 +713,28 @@ $(document).ready(function(){
     }
 })
 
+/* Our staff */
+var chefHolder = document.querySelector('.mu-chef-nav');
+var chefData = database.chefs
+
+for(c in chefData){
+    var liTag = `<li class="col-md-4">
+                    <div class="mu-single-chef">
+                    <figure class="mu-single-chef-img">
+                        <img src="${chefData[c].src}" alt="chef img">
+                    </figure>
+                    <div class="mu-single-chef-info">
+                        <h4>${chefData[c].name}</h4>
+                        <span>${chefData[c].job}</span>
+                    </div>
+                    <div class="mu-single-chef-social display-none">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                    </div>
+                </li>`;
+
+    chefHolder.innerHTML += liTag;
+}
