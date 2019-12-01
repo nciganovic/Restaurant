@@ -25,6 +25,9 @@
 #FOOTER SECTION
 #RESPONSIVE DESIGN
 */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: #ffffff;
@@ -1908,6 +1911,11 @@ RESERVATION SECTION
   #mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-body .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info {
     padding-top: 25.5%;
   }
+}
 
-  
+#mu-author{
+  display: inline;
+  float: left;
+  width: 100%;
+  padding: 100px 0;
 }

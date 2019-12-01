@@ -297,6 +297,17 @@ var database = {
             job:"Head Chef 7",
             src:"assets/img/chef/chef9.jpg",
         },
+    },
+    author:{
+        info:`Hi, my name is Nikola Ciganovic and i am web developer from Belgrade, Serbia. 
+        I am currently attending ICT Collage of vocational studies in Belgrade where i study Web devlopment and Software development in general. 
+        My passion is creating websites and web applications.
+        If you are interesed, there are number of ways to contact me:`,
+        social:{
+            0:"Send email to <u>nciganovic99@gmail.com</u>",
+            1:`Send message via <a href="https://www.linkedin.com/in/nikola-ciganovi%C4%87-938255167/"><u>LinkedIn</u></a>`,
+            2:`Visit my <a href="https://nikolaciganovic.netlify.com/"><u> offical webstie </u></a> and see all the work that i've done`
+        }
     }
 }
 /* TODO change  bgImageHolder.style.backgroundImage to classList add or something */
@@ -798,4 +809,13 @@ function SubmitFormContactUs(){
     }
 }
 
+/* Author */
+var authorP = document.querySelector('.mu-author-right p')
+var authorUl = document.querySelector('.mu-author-right ul')
 
+authorP.innerHTML = database.author.info;
+for(s in database.author.social){
+    var liTag = document.createElement('li');
+    liTag.innerHTML = database.author.social[s];
+    authorUl.appendChild(liTag);
+}
