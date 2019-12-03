@@ -237,6 +237,9 @@ img {
 .display-block{
   display: block;
 }
+.mt-5{
+  margin-top: 5%;
+}
 .mu-main-navbar .navbar-header .navbar-brand {
   color: #333;
   display: inline-block;
@@ -367,11 +370,12 @@ img {
 }
 .dot-div{
   position: absolute;
-  bottom: -320px;
-  left: 0px;
+  bottom: 20%;
+  left: 0; 
   display: flex;
   justify-content: center;
   width: 100%;
+  z-index: 900;
 }
 
 .dot{
@@ -386,7 +390,7 @@ img {
 }
 
 .mu-top-slider .mu-top-slider-single:after {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   bottom: 0;
   content: "";
   left: 0;
@@ -1918,4 +1922,10 @@ RESERVATION SECTION
   float: left;
   width: 100%;
   padding: 100px 0;
+}
+
+@media (min-width: 1200px){
+  #mobile-navbar{
+    display: none !important;
+  }
 }

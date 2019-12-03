@@ -1,230 +1,241 @@
 var database = {
     slider:{
         first:{
-            title:"Frist Slider",
-            desc: "Description of first slider",
+            title:"Special place for special people",
+            desc: "Place for only those people who are ready to experience best things in life.",
             imgUrl:"url('assets/img/slider/1.jpg')"
         },
         second:{
-            title:"Second Slider",
-            desc: "Description of second slider",
+            title:"High quality food",
+            desc: "Experience what is like to eat highest quallity food on planet.",
             imgUrl:"url('assets/img/slider/2.jpg')"
         },
         third:{
-            title:"Third Slider",
-            desc: "Description of third slider",
+            title:"Incredible service",
+            desc: "With our incredeble service you will feel like you are Prince of Saudi Arabia",
             imgUrl:"url('assets/img/slider/3.jpg')"
         }
     },
     aboutUs:{
         intro:{
-            pText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam minus aliquid, itaque illum assumenda repellendus dolorem, dolore numquam totam saepe, porro delectus, libero enim odio quo. Explicabo ex sapiente sit eligendi, facere voluptatum! Quia vero rerum sunt porro architecto corrupti eaque corporis eum, enim soluta, perferendis dignissimos, repellendus, beatae laboriosam."
+            pText: `Imperial restourant is exist since 1978. A former castle of King Arthur and inlaid with colorful Moroccan mosaic tiles, the restaurant is a labor of love overseen by the husband-and-wife team of Christophe Gourdain (formerly of Jean Georges in Manhattan) and Sylma Pérez, a former Ralph Lauren designer. Chef Juan Peña, sticks close to French tradition with dishes like escargot in puff pastry, duck magret roasted with honey. Restorant is famous for often beign eating place for many celebrites. One of the most iconic foods are:`
         },
         list:{
-            obj1:"1",
-            obj2:"2",
-            obj3:"3",
-            obj4:"4",
-            obj5:"5",
+            0:"Black Label Burger",
+            1:"Black Cod With Miso, Nobu",
+            2:"Biscuits and Gravy, Loveless Café",
+            3:"Mozzarella and mango pizza",
+            4:"Corn and vanilla bread",
         },
-        outro:{
-            pText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque similique molestias est quod reprehenderit, quibusdam nam qui, quam magnam."
+    },
+    counter:{
+        description:{
+            0:"Fresh",
+            1:"Delicius",
+            2:"Hot",
+            3:"Satisfied",
+        },
+        name:{
+            0:"Breakfast",
+            1:"Lunches",
+            2:"Coffes",
+            3:"Customers",
         }
     },
     ourMenu:{
         Breakfast:{
             1:{
-                src:"assets/img/menu/slika1.jpg",
-                title:"breakfast 1 title",
+                src:"assets/img/menu/menu2.jpg",
+                title:"Burger with eggs",
                 price:"$153.59",
-                desc: "Description of breakfast 1"
+                desc: "Beaf burger that also has eggs."
             },
             2:{
-                src:"assets/img/menu/slika1.jpg",
-                title:"breakfast 2 title",
-                price:"$15.59",
-                desc: "Description of breakfast 2"
+                src:"assets/img/menu/menu7.jpg",
+                title:"Pancakes with lato creame",
+                price:"$123.59",
+                desc: "One pancake with option of lato creame on top."
             },
             3:{
-                src:"assets/img/menu/slika1.jpg",
-                title:"breakfast 3 title",
-                price:"$125.59",
-                desc: "Description of breakfast 3"
+                src:"assets/img/menu/menu8.jpg",
+                title:"Big pancake with vanilla",
+                price:"$125.89",
+                desc: "Pancake 200g with option of vannila on top."
             },
             4:{
-                src:"assets/img/menu/slika1.jpg",
-                title:"breakfast 4 title",
-                price:"$5.59",
-                desc: "Description of breakfast 4"
+                src:"assets/img/menu/menu12.jpg",
+                title:"Traingle sandwich",
+                price:"$46.49",
+                desc: "Sandwich with ham, cheese and vegtables."
             },
             5:{
-                src:"assets/img/menu/slika1.jpg",
-                title:"breakfast 5 title",
-                price:"$1.59",
-                desc: "Description of breakfast 5"
+                src:"assets/img/menu/menu27.jpg",
+                title:"Heart bread eggs",
+                price:"$54.59",
+                desc: "Egg inside bread with shape of heart"
             },
             6:{
-                src:"assets/img/menu/slika1.jpg",
-                title:"breakfast 6 title",
-                price:"$1545.59",
-                desc: "Description of breakfast 6"
+                src:"assets/img/menu/menu23.jpg",
+                title:"Baken sandwich",
+                price:"$205.59",
+                desc: "Baken sandwich with origano, cheese and ham"
             }
         },
         Meals:{
             1:{
-                src:"slika1.jpg",
-                title:"Meal title 1",
+                src:"assets/img/menu/menu6.jpg",
+                title:"Prune and squash salad",
                 price:"$99.59",
-                desc: "Description of Meal"
+                desc: "Famous Chinees meal with eggs, vegies and noodles"
             },
             2:{
-                src:"slika1.jpg",
-                title:"Meal title 2",
+                src:"assets/img/menu/menu5.jpg",
+                title:"Sosa soup",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Soup with white meat"
             },
             3:{
-                src:"slika1.jpg",
-                title:"Meal title 3",
+                src:"assets/img/menu/menu3.jpg",
+                title:"Tofu and falafel sausages",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Sausages with potato and pinckles"
             },
             4:{
-                src:"slika1.jpg",
-                title:"Meal title 4",
+                src:"assets/img/menu/menu25.jpg",
+                title:"Pizza Capricciosa",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Whole pizza with Italian recepies"
             },
             5:{
-                src:"slika1.jpg",
-                title:"Meal title 5",
+                src:"assets/img/menu/menu1.jpg",
+                title:"Chicken meat with sauce",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "250g of chicken meat with ruzi sauce"
             },
             6:{
-                src:"slika1.jpg",
-                title:"Meal title 6",
+                src:"assets/img/menu/menu13.jpg",
+                title:"Total Frenzy Meal",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Mixed eggs with veggies and bread"
             }
         },
         Snacks:{
             1:{
-                src:"slika1.jpg",
-                title:"Snack 1",
+                src:"assets/img/menu/menu28.jpg",
+                title:"French fries",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Fries with options of ketchup"
             },
             2:{
-                src:"slika1.jpg",
-                title:"Snack 2",
+                src:"assets/img/menu/menu26.jpg",
+                title:"Goat cheese and caper salad",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Salad with broccoli, meat, peas"
             },
             3:{
-                src:"slika1.jpg",
-                title:"Snack 3",
+                src:"assets/img/menu/menu20.jpg",
+                title:"Long wreck pie",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Pie with salad and meat inside"
             },
             4:{
-                src:"slika1.jpg",
-                title:"Snack 4",
+                src:"assets/img/menu/menu8.jpg",
+                title:"Fat pancakes",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "1cm tall pancakes with options on top"
             },
             5:{
-                src:"slika1.jpg",
-                title:"Snack 5",
+                src:"assets/img/menu/menu17.jpg",
+                title:"Lemon and zabagilone salad",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Vegtable salad with noodles and meat"
             },
             6:{
-                src:"slika1.jpg",
-                title:"Snack 6",
+                src:"assets/img/menu/menu21.jpg",
+                title:"Yuzu wing",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Chiken wing with onion on top"
             }
         },
         Desserts:{
             1:{
-                src:"slika1.jpg",
-                title:"Desserts 1",
+                src:"assets/img/menu/menu4.jpg",
+                title:"Fruits on stick",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Orange, apple, banana, avocado and pear on stick"
             },
             2:{
-                src:"slika1.jpg",
-                title:"Desserts 2",
+                src:"assets/img/menu/menu16.jpg",
+                title:"Sweet pancake",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Pakcakes with strawberries and sugar"
             },
             3:{
-                src:"slika1.jpg",
-                title:"Desserts 3",
+                src:"assets/img/menu/menu15.jpg",
+                title:"Rainbow donut",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Donut with chocolate and sugar"
             },
             4:{
-                src:"slika1.jpg",
-                title:"Desserts 4",
+                src:"assets/img/menu/menu14.jpg",
+                title:"Rosemary and peach cookies",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Baked cake with chocolate inside"
             },
             5:{
-                src:"slika1.jpg",
-                title:"Desserts 5",
+                src:"assets/img/menu/menu19.jpg",
+                title:"Rosemary and aubergine gyoza",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Multiple pancakes with cheese and ham in between"
             },
             6:{
-                src:"slika1.jpg",
-                title:"Desserts 6",
+                src:"assets/img/menu/menu22.jpg",
+                title:"Yuzu pie",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "Small pie in cup that tasted like pizza"
             }
         },
         Drinks:{
             1:{
-                src:"slika1.jpg",
-                title:"Drink 1",
-                price:"$15.59",
-                desc: "Description of breakfast"
+                src:"assets/img/menu/drink5.jpg",
+                title:"Lasko beer",
+                price:"$7.59",
+                desc: "0.5l of Lasko beer"
             },
             2:{
-                src:"slika1.jpg",
-                title:"Drink 2",
+                src:"assets/img/menu/drink4.jpg",
+                title:"Carlsberg beer",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "0.8l of Carlsberg beer"
             },
             3:{
-                src:"slika1.jpg",
-                title:"Drink 3",
+                src:"assets/img/menu/drink6.jpg",
+                title:"Jack Daniels",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "0.02l of Wiskey Jack Daniels"
             },
             4:{
-                src:"slika1.jpg",
-                title:"Drink 4",
+                src:"assets/img/menu/drink3.jpg",
+                title:"Lion beer",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "0.5l of Lion beer"
             },
             5:{
-                src:"slika1.jpg",
-                title:"Drink 5",
+                src:"assets/img/menu/drink2.jpg",
+                title:"Purple juice",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "0.3l of Purpule juice"
             },
             6:{
-                src:"slika1.jpg",
-                title:"Drink 6",
+                src:"assets/img/menu/drink1.jpg",
+                title:"Orange juice",
                 price:"$15.59",
-                desc: "Description of breakfast"
+                desc: "0.3l of Orange juice"
             }
         }
     },
     reservation:{
-        desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quidem autem iusto, perspiciatis, amet, quaerat blanditiis ducimus eius recusandae nisi aut totam alias consectetur et",
+        desc:"Since we have a lots of guests every day it is smart to reserver your table with email. Reservation needs to be done at least 24h before order.",
     },
     gallery:{
         img1:"assets/img/gallery/1.jpg",
@@ -239,15 +250,15 @@ var database = {
     },
     testemonials:{
         0:{
-            text:"This resourant is amazing.",
+            text:"This resourant is amazing. I am coming here for three months now and i was never disappointed.",
             name:"Mike Scott"
         },
         1:{
-            text:"Food id delecius.",
+            text:"Food is really the highest quallity. Chefs are almost like magicians.",
             name:"Tom Brady"
         },
         2:{
-            text:"Best lunch on planet.",
+            text:"Service was really on top. I can't belive someone is treating customers this great.",
             name:"Ashley Michels"
         }
     },
@@ -258,43 +269,43 @@ var database = {
             src:"assets/img/chef/chef1.jpg",
         },
         1:{
-            name:"Peter Smith",
-            job:"Head Chef",
+            name:"Adriana Castillo",
+            job:"Sous Chef",
             src:"assets/img/chef/chef2.jpg",
         },
         2:{
-            name:"John Taylor 2",
-            job:"Head Chef 1",
+            name:"Laurel Kelley",
+            job:"Sous Chef",
             src:"assets/img/chef/chef3.jpg",
         },
         3:{
-            name:"John Taylor 3",
-            job:"Head Chef 2",
+            name:"Cory Carson",
+            job:"Butcher chef",
             src:"assets/img/chef/chef4.jpg",
         },
         4:{
-            name:"John Taylor 4",
-            job:"Head Chef 3",
+            name:"Susan Hale",
+            job:"Pantry chef",
             src:"assets/img/chef/chef5.jpg",
         },
         5:{
-            name:"John Taylor 5",
-            job:"Head Chef 4",
+            name:"Alexander Garcia",
+            job:"Vegetable chef",
             src:"assets/img/chef/chef6.jpg",
         },
         6:{
-            name:"John Taylor 6",
-            job:"Head Chef 5",
+            name:"Manuel Schwartz",
+            job:"Kitchen Porter",
             src:"assets/img/chef/chef7.jpg",
         },
         7:{
-            name:"John Taylor 7",
-            job:"Head Chef 6",
+            name:"Julio Jennings",
+            job:"Kitchen Porter",
             src:"assets/img/chef/chef8.jpg",
         },
         8:{
-            name:"John Taylor 8",
-            job:"Head Chef 7",
+            name:"Van Barber",
+            job:"Dishwasher",
             src:"assets/img/chef/chef9.jpg",
         },
     },
@@ -307,6 +318,28 @@ var database = {
             0:"Send email to <u>nciganovic99@gmail.com</u>",
             1:`Send message via <a href="https://www.linkedin.com/in/nikola-ciganovi%C4%87-938255167/"><u>LinkedIn</u></a>`,
             2:`Visit my <a href="https://nikolaciganovic.netlify.com/"><u> offical webstie </u></a> and see all the work that i've done`
+        }
+    },
+    footer:{
+        0:{
+            link:"https://www.facebook.com/",
+            icon:"fab fa-facebook",
+        },
+        1:{
+            link:"https://twitter.com/",
+            icon:"fab fa-twitter",
+        },
+        2:{
+            link:"https://www.linkedin.com/in/nikola-ciganovi%C4%87-938255167/",
+            icon:"fab fa-linkedin-in",
+        },
+        3:{
+            link:"https://www.youtube.com/",
+            icon:"fab fa-youtube",
+        },
+        4:{
+            link:"https://github.com/nciganovic/Restaurant",
+            icon:"fab fa-github",
         }
     }
 }
@@ -337,7 +370,7 @@ function changeToSlide1(){
     sliderHeadline.innerText = database.slider.first.title;
     sliderDescription.innerText = database.slider.first.desc;
     bgImageHolder.style.backgroundImage = database.slider.first.imgUrl;
-
+    bgImageHolder.style.transition = 'background 1s linear';
     currentSlide = 1;
 }
 
@@ -353,7 +386,7 @@ function changeToSlide2(){
     sliderHeadline.innerText = database.slider.second.title;
     sliderDescription.innerText = database.slider.second.desc;
     bgImageHolder.style.backgroundImage = database.slider.second.imgUrl;
-    
+    bgImageHolder.style.transition = 'background 1s linear';
     currentSlide = 2;
 }
 
@@ -368,7 +401,7 @@ function changeToSlide3(){
     sliderHeadline.innerText = database.slider.third.title;
     sliderDescription.innerText = database.slider.third.desc;
     bgImageHolder.style.backgroundImage = database.slider.third.imgUrl;
-    
+    bgImageHolder.style.transition = 'background 1s linear';
     currentSlide = 3;
 }
 
@@ -403,8 +436,9 @@ var isOpenNavbar = false;
 navbarBtn.addEventListener('click', openOrCloseNavbar);
 
 function openOrCloseNavbar(){
-    nabarMobile.classList.toggle('display-none');
-    nabarMobile.classList.toggle('display-block');
+    $(document).ready(function(){
+       $('#mobile-navbar').slideToggle();
+    })
     navbarIcon.classList.toggle('fa-times');
     navbarIcon.classList.toggle('fa-bars');
 }
@@ -418,14 +452,13 @@ var aboutUsP = document.querySelectorAll('.mu-about-us-right p');
 var aboutUsUl = document.querySelector('.mu-about-us-right ul');
 
 aboutUsP[0].innerText = database.aboutUs.intro.pText;
-aboutUsP[1].innerText = database.aboutUs.outro.pText;
 
 
 var obj = database.aboutUs.list;
 
 for(var i in obj){
     var li = document.createElement('li');
-    li.innerText = i;
+    li.innerText = obj[i];
     aboutUsUl.appendChild(li);
 }
 
@@ -444,6 +477,20 @@ var observer = new IntersectionObserver(function(entries) {
 observer.observe(document.querySelector("#mu-counter"));
 
 /* Item couner */
+var counerListHolder = document.querySelector('.mu-counter-nav');
+var counerLength = 4;
+
+for(let i = 0; i < counerLength; i++){
+    var liTag = `<li class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="mu-single-counter">
+                    <span>${database.counter.description[i]}</span>
+                    <h3><span class="counter-value">0</span><sup>+</sup></h3>
+                    <p>${database.counter.name[i]}</p>
+                    </div>
+                </li>`
+    counerListHolder.innerHTML += liTag;
+}
+
 var item1 =  document.getElementsByClassName('counter-value')[0];
 var item2 =  document.getElementsByClassName('counter-value')[1];
 var item3 =  document.getElementsByClassName('counter-value')[2];
@@ -797,7 +844,7 @@ function checkSubjectContactUs(){
 function SubmitFormContactUs(){
     var errorMsg = document.getElementById('contactUsErrMessages');
     if(!ContactUsisNameValid || !ContactUsisEmailValid || !ContactUsisSubjectValid){
-        errorMsg.innerText = 'Make sure all of the fields entered and valid';
+        errorMsg.innerText = 'Make sure all of the fields are entered and valid';
     }
     else{
         errorMsg.innerText = '';
@@ -818,4 +865,15 @@ for(s in database.author.social){
     var liTag = document.createElement('li');
     liTag.innerHTML = database.author.social[s];
     authorUl.appendChild(liTag);
+}
+
+/* Footer */
+var socailMediaIconHolder = document.querySelector('.mu-footer-social');
+
+for(i in database.footer){
+    console.log(database.footer[i].link)
+    console.log(database.footer[i].icon)
+    
+    var aTag = `<a href="${database.footer[i].link}" target="_blank"><i class="${database.footer[i].icon}"></i></a>`;
+    socailMediaIconHolder.innerHTML += aTag;
 }
