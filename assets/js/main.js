@@ -1,4 +1,26 @@
 var database = {
+    menu:{
+        name:{
+            0:"ABOUT US",
+            1:"MENU",
+            2:"RESERVATION",
+            3:"GALLERY",
+            4:"OUR CHEFS",
+            5:"CONTACT",
+            6:"AUTHOR",
+            7:"DOCUMENTATION",
+        },
+        href:{
+            0:"#mu-about-us",
+            1:"#mu-restaurant-menu",
+            2:"#mu-reservation",
+            3:"#mu-gallery",
+            4:"#mu-chef",
+            5:"#mu-contact",
+            6:"#mu-author",
+            7:"assets/Dokumentacija.pdf",
+        }
+    },
     slider:{
         first:{
             title:"Special place for special people",
@@ -343,7 +365,19 @@ var database = {
         }
     }
 }
-/* TODO change  bgImageHolder.style.backgroundImage to classList add or something */
+
+/* Dynamic menu */
+var desktopMenu = document.getElementById('top-menu');
+var mobileMenu = document.getElementById('mobile-navbar-list');
+
+for(let i = 0; i < 8; i++){
+    var liTagDesktop = `<li><a href="${database.menu.href[i]}">${database.menu.name[i]}</a></li>`;
+    var liTagMobile = `<a href="${database.menu.href[i]}"><li>${database.menu.name[i]}</li></a>`;
+
+    desktopMenu.innerHTML += liTagDesktop;
+    mobileMenu.innerHTML += liTagMobile;
+}
+
 var dot = document.getElementsByClassName('dot');
 var sliderHeadline = document.querySelector('.mu-top-slider-content h2');
 var sliderDescription = document.querySelector('.mu-top-slider-content p');
@@ -351,7 +385,6 @@ var bgImageHolder = document.querySelector('.mu-top-slider-single');
 
 var currentSlide = 0;
 
-/** Setting default values **/
 sliderHeadline.innerText = database.slider.first.title;
 sliderDescription.innerText = database.slider.first.desc;
 
@@ -661,7 +694,7 @@ formRes.btnRes.addEventListener('click', submitReservetionFrom);
 
 function submitReservetionFrom(){
 
-    var firstNameRgx = /^[A-z]{1,15}(\s[A-z]{1,15})?$/;
+    var firstNameRgx = /^[A-zšđčćž]{1,15}(\s[A-zšđčćž]{1,15})?$/;
     isFullNameValid = firstNameRgx.test(formRes.fullNameRes.value);
     console.log(formRes.fullNameRes.value);
     console.log(isFullNameValid);
@@ -740,7 +773,7 @@ for(i in allImgsLinks){
 
     galleryBody.innerHTML += divInGallery;
 }
-
+/* Tetemonial */
 var testemonialData = database.testemonials;
 
 $(document).ready(function(){	
@@ -790,7 +823,7 @@ for(c in chefData){
     chefHolder.innerHTML += liTag;
 }
 
-/* Contact us */ /* TODO FIX CONTACT US FORM AND CHECK REGEX*/ 
+/* Contact us */  
 var contactFrom = document.getElementById('mu-contact-form');
 
 var ContactUsisNameValid = false;
@@ -804,7 +837,7 @@ contactFrom.btnContactUs.addEventListener('click', SubmitFormContactUs);
 
 function checkNameContactUs(){
     var nameErr = document.getElementById('nameErr');
-    var nameRgx = /^[A-z]{1,15}(\s[A-z]{1,15})?$/;
+    var nameRgx = /^[A-zšđčćž]{1,15}(\s[A-zšđčćž]{1,15})?$/;
     ContactUsisNameValid = nameRgx.test(contactFrom.name.value);
     console.log(ContactUsisNameValid);
     if(ContactUsisNameValid){
