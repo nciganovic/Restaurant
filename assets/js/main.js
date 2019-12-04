@@ -18,7 +18,7 @@ var database = {
     },
     aboutUs:{
         intro:{
-            pText: `Imperial restourant is exist since 1978. A former castle of King Arthur and inlaid with colorful Moroccan mosaic tiles, the restaurant is a labor of love overseen by the husband-and-wife team of Christophe Gourdain (formerly of Jean Georges in Manhattan) and Sylma Pérez, a former Ralph Lauren designer. Chef Juan Peña, sticks close to French tradition with dishes like escargot in puff pastry, duck magret roasted with honey. Restorant is famous for often beign eating place for many celebrites. One of the most iconic foods are:`
+            pText: `Imperial restaurant exist since 1978. A former castle of King Arthur and inlaid with colorful Moroccan mosaic tiles, the restaurant is a labor of love overseen by the husband-and-wife team of Christophe Gourdain (formerly of Jean Georges in Manhattan) and Sylma Pérez, a former Ralph Lauren designer. Chef Juan Peña, sticks close to French tradition with dishes like escargot in puff pastry, duck magret roasted with honey. Restorant is famous for often beign eating place for many celebrites. One of the most iconic foods are:`
         },
         list:{
             0:"Black Label Burger",
@@ -91,31 +91,31 @@ var database = {
             2:{
                 src:"assets/img/menu/menu5.jpg",
                 title:"Sosa soup",
-                price:"$15.59",
+                price:"$115.46",
                 desc: "Soup with white meat"
             },
             3:{
                 src:"assets/img/menu/menu3.jpg",
                 title:"Tofu and falafel sausages",
-                price:"$15.59",
+                price:"$234.59",
                 desc: "Sausages with potato and pinckles"
             },
             4:{
                 src:"assets/img/menu/menu25.jpg",
                 title:"Pizza Capricciosa",
-                price:"$15.59",
+                price:"$87.89",
                 desc: "Whole pizza with Italian recepies"
             },
             5:{
                 src:"assets/img/menu/menu1.jpg",
                 title:"Chicken meat with sauce",
-                price:"$15.59",
+                price:"$75.59",
                 desc: "250g of chicken meat with ruzi sauce"
             },
             6:{
                 src:"assets/img/menu/menu13.jpg",
                 title:"Total Frenzy Meal",
-                price:"$15.59",
+                price:"$35.59",
                 desc: "Mixed eggs with veggies and bread"
             }
         },
@@ -123,37 +123,37 @@ var database = {
             1:{
                 src:"assets/img/menu/menu28.jpg",
                 title:"French fries",
-                price:"$15.59",
+                price:"$67.86",
                 desc: "Fries with options of ketchup"
             },
             2:{
                 src:"assets/img/menu/menu26.jpg",
                 title:"Goat cheese and caper salad",
-                price:"$15.59",
+                price:"$34.75",
                 desc: "Salad with broccoli, meat, peas"
             },
             3:{
                 src:"assets/img/menu/menu20.jpg",
                 title:"Long wreck pie",
-                price:"$15.59",
+                price:"$32.19",
                 desc: "Pie with salad and meat inside"
             },
             4:{
                 src:"assets/img/menu/menu8.jpg",
                 title:"Fat pancakes",
-                price:"$15.59",
+                price:"$45.86",
                 desc: "1cm tall pancakes with options on top"
             },
             5:{
                 src:"assets/img/menu/menu17.jpg",
                 title:"Lemon and zabagilone salad",
-                price:"$15.59",
+                price:"$63.49",
                 desc: "Vegtable salad with noodles and meat"
             },
             6:{
                 src:"assets/img/menu/menu21.jpg",
                 title:"Yuzu wing",
-                price:"$15.59",
+                price:"$64.78",
                 desc: "Chiken wing with onion on top"
             }
         },
@@ -161,37 +161,37 @@ var database = {
             1:{
                 src:"assets/img/menu/menu4.jpg",
                 title:"Fruits on stick",
-                price:"$15.59",
+                price:"$22.99",
                 desc: "Orange, apple, banana, avocado and pear on stick"
             },
             2:{
                 src:"assets/img/menu/menu16.jpg",
                 title:"Sweet pancake",
-                price:"$15.59",
+                price:"$65.89",
                 desc: "Pakcakes with strawberries and sugar"
             },
             3:{
                 src:"assets/img/menu/menu15.jpg",
                 title:"Rainbow donut",
-                price:"$15.59",
+                price:"$13.59",
                 desc: "Donut with chocolate and sugar"
             },
             4:{
                 src:"assets/img/menu/menu14.jpg",
                 title:"Rosemary and peach cookies",
-                price:"$15.59",
+                price:"$45.99",
                 desc: "Baked cake with chocolate inside"
             },
             5:{
                 src:"assets/img/menu/menu19.jpg",
                 title:"Rosemary and aubergine gyoza",
-                price:"$15.59",
+                price:"$21.39",
                 desc: "Multiple pancakes with cheese and ham in between"
             },
             6:{
                 src:"assets/img/menu/menu22.jpg",
                 title:"Yuzu pie",
-                price:"$15.59",
+                price:"$54.89",
                 desc: "Small pie in cup that tasted like pizza"
             }
         },
@@ -205,31 +205,31 @@ var database = {
             2:{
                 src:"assets/img/menu/drink4.jpg",
                 title:"Carlsberg beer",
-                price:"$15.59",
+                price:"$8.79",
                 desc: "0.8l of Carlsberg beer"
             },
             3:{
                 src:"assets/img/menu/drink6.jpg",
                 title:"Jack Daniels",
-                price:"$15.59",
+                price:"$34.64",
                 desc: "0.02l of Wiskey Jack Daniels"
             },
             4:{
                 src:"assets/img/menu/drink3.jpg",
                 title:"Lion beer",
-                price:"$15.59",
+                price:"$7.99",
                 desc: "0.5l of Lion beer"
             },
             5:{
                 src:"assets/img/menu/drink2.jpg",
                 title:"Purple juice",
-                price:"$15.59",
+                price:"$5.59",
                 desc: "0.3l of Purpule juice"
             },
             6:{
                 src:"assets/img/menu/drink1.jpg",
                 title:"Orange juice",
-                price:"$15.59",
+                price:"$4.59",
                 desc: "0.3l of Orange juice"
             }
         }
@@ -250,7 +250,7 @@ var database = {
     },
     testemonials:{
         0:{
-            text:"This resourant is amazing. I am coming here for three months now and i was never disappointed.",
+            text:"This resourant is amazing. I was never disappointed in food they provide.",
             name:"Mike Scott"
         },
         1:{
@@ -557,7 +557,7 @@ for(i in data){
     var liTag = `<li>
                     <div class="media">
                         <div class="media-left">
-                            <a href="#">
+                            <a href="#img">
                                 <img class="media-object" src="${data[i].src}" alt="img-110x110">
                             </a>
                         </div>
@@ -790,7 +790,7 @@ for(c in chefData){
     chefHolder.innerHTML += liTag;
 }
 
-/* Contact us */
+/* Contact us */ /* TODO FIX CONTACT US FORM AND CHECK REGEX*/ 
 var contactFrom = document.getElementById('mu-contact-form');
 
 var ContactUsisNameValid = false;
@@ -825,6 +825,7 @@ function checkEmailContactUs(){
     }
     else{
         emailErr.innerText = 'Please enter valid email';
+        
     }
 }
 
@@ -853,6 +854,10 @@ function SubmitFormContactUs(){
         contactFrom.email.value = '';
         contactFrom.subject.value = '';
         contactFrom.message.value = '';
+        
+        ContactUsisNameValid = false;
+        ContactUsisEmailValid = false;
+        ContactUsisSubjectValid = false;
     }
 }
 
