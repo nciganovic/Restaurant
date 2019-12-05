@@ -377,7 +377,7 @@ for(let i = 0; i < 8; i++){
     desktopMenu.innerHTML += liTagDesktop;
     mobileMenu.innerHTML += liTagMobile;
 }
-
+/* Slider */
 var dot = document.getElementsByClassName('dot');
 var sliderHeadline = document.querySelector('.mu-top-slider-content h2');
 var sliderDescription = document.querySelector('.mu-top-slider-content p');
@@ -495,6 +495,7 @@ for(var i in obj){
     aboutUsUl.appendChild(li);
 }
 
+/* Item couner */
 var observer = new IntersectionObserver(function(entries) {
 	// isIntersecting is true when element and viewport are overlapping
 	// isIntersecting is false when element and viewport don't overlap
@@ -509,7 +510,7 @@ var observer = new IntersectionObserver(function(entries) {
 
 observer.observe(document.querySelector("#mu-counter"));
 
-/* Item couner */
+
 var counerListHolder = document.querySelector('.mu-counter-nav');
 var counerLength = 4;
 
