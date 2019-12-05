@@ -694,7 +694,7 @@ formRes.btnRes.addEventListener('click', submitReservetionFrom);
 
 function submitReservetionFrom(){
 
-    var firstNameRgx = /^[A-zšđčćž]{1,15}(\s[A-zšđčćž]{1,15})?$/;
+    var firstNameRgx = /^[A-zšđčćžŠĐČĆŽ]{1,15}(\s[A-zšđčćžŠĐČĆŽ]{1,15})?$/;
     isFullNameValid = firstNameRgx.test(formRes.fullNameRes.value);
     console.log(formRes.fullNameRes.value);
     console.log(isFullNameValid);
@@ -716,7 +716,7 @@ function submitReservetionFrom(){
         isSelectValid = false;
     }
 
-    var dateRgx = /^([1-9]|0[1-9]|[1-2][0-9]|3[0-1])-([1-9]|0[1-9]|1[0-2])-2019$/;
+    var dateRgx = /^([1-9]|0[1-9]|[1-2][0-9]|3[0-1])-([1-9]|0[1-9]|1[0-2])-(2019|2020)$/;
     isDateValid = dateRgx.test(formRes.datepicker.value);
     console.log(formRes.datepicker.value);
     console.log(isDateValid);
@@ -837,7 +837,7 @@ contactFrom.btnContactUs.addEventListener('click', SubmitFormContactUs);
 
 function checkNameContactUs(){
     var nameErr = document.getElementById('nameErr');
-    var nameRgx = /^[A-zšđčćž]{1,15}(\s[A-zšđčćž]{1,15})?$/;
+    var nameRgx = /^[A-zšđčćžŠĐČĆŽ]{1,15}(\s[A-zšđčćžŠĐČĆŽ]{1,15})?$/;
     ContactUsisNameValid = nameRgx.test(contactFrom.name.value);
     console.log(ContactUsisNameValid);
     if(ContactUsisNameValid){
